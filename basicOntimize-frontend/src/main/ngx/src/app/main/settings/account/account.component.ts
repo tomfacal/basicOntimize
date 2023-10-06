@@ -10,7 +10,7 @@ import { UserInfoService } from '../../../shared/services/user-info.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SettingsAccountComponent {
-  @ViewChild('form', { static: true }) form: OFormComponent;
+  @ViewChild('form') form: OFormComponent;
   validatorsNewPasswordArray: ValidatorFn[] = [];
   constructor(public userInfoService: UserInfoService) {
     // check whether the entered password has a number

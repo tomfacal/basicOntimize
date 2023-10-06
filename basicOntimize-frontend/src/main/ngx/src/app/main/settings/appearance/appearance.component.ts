@@ -1,5 +1,6 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
-import { MatRadioChange, MatSlideToggle, MatSlideToggleChange } from '@angular/material';
+import { MatRadioChange } from '@angular/material/radio';
+import { MatSlideToggle, MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { AppConfig, OTranslateService, Util } from 'ontimize-web-ngx';
 import { DocsSiteTheme, ThemeService } from '../../../shared/services/theme.service';
 
@@ -17,7 +18,7 @@ export class SettingsAppearanceComponent  {
   public currentTheme: DocsSiteTheme;
   public darkDefaultMode = false;
 
-  @ViewChild('toggleDark', { static: false })
+  @ViewChild('toggleDark')
   private toggleDark: MatSlideToggle;
 
   constructor(

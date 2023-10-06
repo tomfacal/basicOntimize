@@ -11,7 +11,7 @@ import { UserInfoService } from '../../../shared/services/user-info.service';
 })
 export class SettingsProfileComponent {
 
-  @ViewChild('form', { static: true }) form: OFormComponent;
+  @ViewChild('form') form: OFormComponent;
 
   constructor(public userInfoService: UserInfoService) { }
   ngAfterViewInit() {
