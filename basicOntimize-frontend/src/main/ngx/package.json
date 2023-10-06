@@ -50,7 +50,6 @@
     "@types/jasmine": "~3.3.8",
     "@types/node": "~8.9.4",
     "acorn": "5.7.4",
-    "codelyzer": "5.1.0",
     "handlebars": "4.7.3",
     "jasmine-core": "^3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
