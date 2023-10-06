@@ -1,6 +1,6 @@
 import { DomSanitizer } from '@angular/platform-browser';
 import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService, NavigationService, ServiceResponse, OUserInfoService } from 'ontimize-web-ngx';
 import { Observable } from 'rxjs';
@@ -15,9 +15,9 @@ import { UserInfoService } from '../shared/services/user-info.service';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup = new FormGroup({});
-  userCtrl: FormControl = new FormControl('', Validators.required);
-  pwdCtrl: FormControl = new FormControl('', Validators.required);
+  loginForm: UntypedFormGroup = new UntypedFormGroup({});
+  userCtrl: UntypedFormControl = new UntypedFormControl('', Validators.required);
+  pwdCtrl: UntypedFormControl = new UntypedFormControl('', Validators.required);
   sessionExpired = false;
 
   router: Router;

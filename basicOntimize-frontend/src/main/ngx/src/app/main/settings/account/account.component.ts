@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, ViewChild } from '@angular/core';
-import { FormControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { UntypedFormControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { OFormComponent, OValidators } from 'ontimize-web-ngx';
 import { UserInfoService } from '../../../shared/services/user-info.service';
 
@@ -28,7 +28,7 @@ export class SettingsAccountComponent {
     this.form.setData({ "usr_id": userInfo.usr_id });
   }
 
-  newPasswordMatchValidator(control: FormControl): ValidationErrors {
+  newPasswordMatchValidator(control: UntypedFormControl): ValidationErrors {
     const newPassword = control.parent.controls['new_password'];
     const confirmNewPassword = control.parent.controls['confirm_new_password'];
 
