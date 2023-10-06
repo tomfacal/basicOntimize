@@ -10,6 +10,8 @@ import { CONFIG } from './app.config';
 import { MainService } from './shared/services/main.service';
 import { StyleManager } from './shared/services/style-manager';
 import { ThemeService } from './shared/services/theme.service';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Standard providers...
 // Defining custom providers (if needed)...
@@ -23,7 +25,9 @@ export const customProviders: any = [
 
 @NgModule({
   imports: [
-    ONTIMIZE_MODULES,
+    BrowserModule,
+    BrowserAnimationsModule,
+    OntimizeWebModule.forRoot(CONFIG),
     OntimizeWebModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
