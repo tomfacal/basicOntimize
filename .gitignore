@@ -14,3 +14,4 @@ basicOntimize-frontend/src/main/ngx/dist/
 basicOntimize-frontend/src/main/ngx/node/
 basicOntimize-frontend/src/main/ngx/node_modules/
 target/
+basicOntimize-frontend/src/main/ngx/.angular/cache

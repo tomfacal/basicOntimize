@@ -10,7 +10,7 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
-         "build": {
+        "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/",
@@ -31,8 +31,14 @@
             ],
             "styles": [
               "node_modules/ontimize-web-ngx/ontimize.scss",
+              "src/assets/css/app.scss",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules"
+              ]
+            },
             "scripts": [
               "src/assets/js/domchange.js",
               "src/assets/js/keyboard.js"
@@ -42,7 +48,11 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "allowedCommonJsDependencies": [
+              "google-libphonenumber",
+              "moment"
+            ]
           },
           "configurations": {
             "compose": {
@@ -204,6 +214,22 @@
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "app:serve"
+          },
+          "cli": {
+            "schematicCollections": [
+              "@angular-eslint/schematics"
+            ],
+            "cache": {
+              "enabled": false
+            }
+          },
+          "schematics": {
+            "@angular-eslint/schematics:application": {
+              "setParserOptionsProject": true
+            },
+            "@angular-eslint/schematics:library": {
+              "setParserOptionsProject": true
+            }
           },
           "configurations": {
             "production": {
