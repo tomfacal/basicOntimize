@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import 'node_modules/@angular/material/theming';
 @mixin settings-theme($theme) {
   $primary: map-get($theme, primary);
@@ -7,23 +8,23 @@
   $foreground: map-get($theme, foreground);
 
   .setting-navigation {
-    border: 1px 1px 1px 0 solid mat-color($foreground, divider);
-    background: mat-color($background,background);
+    border: 1px 1px 1px 0 solid mat.get-color-from-palette($foreground, divider);
+    background: mat.get-color-from-palette($background,background);
 
     .mat-list-item:not(:last-child) {
-      border-bottom: 1px solid mat-color($foreground, divider);
+      border-bottom: 1px solid mat.get-color-from-palette($foreground, divider);
 
     }
 
     .active.mat-list-item {
-      border-left: 3px solid mat-color($accent);
+      border-left: 3px solid mat.get-color-from-palette($accent);
 
     }
   }
 
   .theme-option-background {
     .mat-icon.mat-accent {
-      color: mat-color($accent, 900);
+      color: mat.get-color-from-palette($accent, 900);
     }
   }
 }
