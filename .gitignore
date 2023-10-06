@@ -1,0 +1,16 @@
+.project
+.settings/
+basicOntimize-api/.classpath
+basicOntimize-api/target/
+basicOntimize-boot/.classpath
+basicOntimize-boot/target/
+basicOntimize-frontend/.classpath
+basicOntimize-model/.classpath
+basicOntimize-model/target/
+basicOntimize-ws/.classpath
+basicOntimize-ws/target/
+basicOntimize-frontend/target/
+basicOntimize-frontend/src/main/ngx/dist/
+basicOntimize-frontend/src/main/ngx/node/
+basicOntimize-frontend/src/main/ngx/node_modules/
+target/
